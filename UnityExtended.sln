@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colver", "Colver\Colver.csproj", "{73A59E02-B010-486B-9293-6F7838949944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{2B74D005-D072-40B2-8C7C-CB0061C2B33C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73A59E02-B010-486B-9293-6F7838949944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A59E02-B010-486B-9293-6F7838949944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A59E02-B010-486B-9293-6F7838949944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A59E02-B010-486B-9293-6F7838949944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B74D005-D072-40B2-8C7C-CB0061C2B33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B74D005-D072-40B2-8C7C-CB0061C2B33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B74D005-D072-40B2-8C7C-CB0061C2B33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B74D005-D072-40B2-8C7C-CB0061C2B33C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F0F5F83-A3FA-4394-A0CD-10D42418EA59}
+	EndGlobalSection
+EndGlobal
