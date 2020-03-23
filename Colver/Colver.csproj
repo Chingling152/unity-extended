@@ -39,11 +39,13 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.11f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main\Rigidbody2DExtensions.cs" />
+    <Compile Include="Main\SpriteRendererExtension.cs" />
     <Compile Include="Main\Transform2DExtensions.cs" />
     <Compile Include="Main\Vector2Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
