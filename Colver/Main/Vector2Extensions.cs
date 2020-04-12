@@ -27,7 +27,7 @@ namespace Colver.Main
         /// <param name="vector2">The first Vector 2</param>
         /// <param name="obj">The second Vector 2</param>
         /// <returns>Returns true if the x and the y of the first and the second one are equals</returns>
-        public static bool Equals(this Vector2 vector2, Vector2 obj) => vector2.ToAbsolute().x == obj.ToAbsolute().x && vector2.ToAbsolute().y == obj.ToAbsolute().y;
+        public static bool AbsEquals(this Vector2 vector2, Vector2 obj) => vector2.ToAbsolute().x == obj.ToAbsolute().x && vector2.ToAbsolute().y == obj.ToAbsolute().y;
 
         /// <summary>
         /// Verify if the first Vector is Greater than the second one
@@ -35,7 +35,7 @@ namespace Colver.Main
         /// <param name="vector2">First Vector2</param>
         /// <param name="obj">Second Vector2</param>
         /// <returns>Returns true if the x or the y of the first are grat than x and y of second one</returns>
-        public static bool GreaterThan(this Vector2 vector2, Vector2 obj) => vector2.ToAbsolute().x > obj.ToAbsolute().x || vector2.ToAbsolute().y > obj.ToAbsolute().y;
+        public static bool AbsGreaterThan(this Vector2 vector2, Vector2 obj) => vector2.ToAbsolute().x > obj.ToAbsolute().x || vector2.ToAbsolute().y > obj.ToAbsolute().y;
     }
 
 }

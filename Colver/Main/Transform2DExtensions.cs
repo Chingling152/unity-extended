@@ -9,6 +9,7 @@ namespace Colver.Main
         /// </summary>
         /// <param name="trans">The object wich will be rotated</param>
         /// <param name="target">The place where the object will be rotated</param>
+        [System.Obsolete("May not work in some situations")]
         public static void LookToPosition(this Transform trans,Vector3 target)
         {
             trans.rotation = Quaternion.LookRotation(trans.position - target, Vector3.forward);

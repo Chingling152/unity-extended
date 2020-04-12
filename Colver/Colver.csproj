@@ -44,6 +44,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main\GameObjectExtensions.cs" />
     <Compile Include="Main\Rigidbody2DExtensions.cs" />
     <Compile Include="Main\SpriteRendererExtension.cs" />
     <Compile Include="Main\Transform2DExtensions.cs" />
