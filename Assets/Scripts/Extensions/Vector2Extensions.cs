@@ -36,6 +36,22 @@ namespace UnityExtended.Extensions
         /// <param name="obj">Second Vector2</param>
         /// <returns>Returns true if the x or the y of the first are grat than x and y of second one</returns>
         public static bool AbsGreaterThan(this Vector2 vector2, Vector2 obj) => vector2.ToAbsolute().x > obj.ToAbsolute().x || vector2.ToAbsolute().y > obj.ToAbsolute().y;
+    
+
+        public static void FromAngle(this Vector2 vector2,int angle)
+        {
+            float angleRad = angle * (Mathf.PI / 180f);
+            vector2 = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+        }
+
+        public static float ToAngle(this Vector2 vector2)
+        {
+            float angle = Mathf.Atan2(vector2.y, vector2.x) * Mathf.Rad2Deg;
+            if (angle < 0) angle += 360;
+
+            return angle;
+        }
+
     }
 
 }

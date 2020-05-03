@@ -69,7 +69,7 @@ namespace UnityExtended.Extensions
             T nearestObject = null;
             foreach (T item in objects)
             {
-                var dist = Vector2.Distance(obj.transform.position, item.transform.position);
+                var dist = Vector3.Distance(obj.transform.position, item.transform.position);
 
                 if (dist <= maxDistance)
                 {
@@ -79,12 +79,29 @@ namespace UnityExtended.Extensions
                     }
                     else
                     {
-                        var dist2 = Vector2.Distance(obj.transform.position, nearestObject.transform.position);
+                        var dist2 = Vector3.Distance(obj.transform.position, nearestObject.transform.position);
                         nearestObject = dist < dist2 ? item : nearestObject;
                     }
                 }
             }
             return nearestObject;
+        }
+
+        /// <summary>
+        /// Finds a child insides the gameobject that match with the name parameter
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="name">The name of the child you want to search</param>
+        /// <returns>returns a game object or null</returns>
+        public static GameObject GetChildByName(this GameObject obj,string name)
+        {
+            var childCount = obj.transform.childCount;
+            for(int i = 0; i < childCount; i++)
+            {
+                var child = obj.transform.GetChild(i).gameObject;
+                if(child.name == name) return child;
+            }
+            return null;
         }
     }
 }
