@@ -2,7 +2,7 @@
 
 namespace Entities.Objects
 {
-    public class Projectile : MonoBehaviour
+    public abstract class Projectile : MonoBehaviour
     {
         /// <summary>
         /// Actual time of the Projectile
@@ -10,11 +10,14 @@ namespace Entities.Objects
         protected float Timer = 0;
 
         /// <summary>
-        /// Actual time of the Projectile
+        /// Time to the projectile die
         /// </summary>
         [SerializeField]
         protected float MaxTimer = 5f;
 
+        /// <summary>
+        /// Max speed of the projectile
+        /// </summary>
         [SerializeField]
         protected float MaxSpeed = 5f;
 
