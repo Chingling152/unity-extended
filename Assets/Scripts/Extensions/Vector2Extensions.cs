@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Colver.Main
+namespace UnityExtended.Extensions
 {
     /// <summary>
     /// Class used to create more methos to Vector2 class

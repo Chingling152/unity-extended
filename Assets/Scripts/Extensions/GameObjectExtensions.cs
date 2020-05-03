@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Colver.Main
+namespace UnityExtended.Extensions
 {
     public static class GameObjectExtensions
     {
