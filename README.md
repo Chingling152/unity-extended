@@ -5,7 +5,7 @@ This is my unity package with useful stuff to unity game development. More stuff
 Some useful extension methods to build-in unity classes.
 
 ## Attributes
-Attributes to classes and fields
+Unity Attributes to classes and fields
 
 ## Utils
-W.I.P
+Some extension to C# buld-in classes
