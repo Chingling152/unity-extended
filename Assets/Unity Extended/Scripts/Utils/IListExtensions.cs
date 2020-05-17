@@ -1,22 +1,28 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityExtended.Extensions
+namespace UnityExtended.Utils
 {
     public static class IListExtensions
-    { 
+    {
         /// <summary>
         /// Returns a default value of a list
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="list"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">The type of the current List/Array</typeparam>
+        /// <returns>Returns a random item from <paramref name="list"/></returns>
         public static T GetRandom<T>(this IList<T> list)
         {
             if(list == null)return default;
             return list[Random.Range(0,list.Count)];
         }
 
+        /// <summary>
+        /// Return a random Item from an array/List
+        /// </summary>
+        /// <typeparam name="T">The type of the current List/Array</typeparam>
+        /// <param name="min">The min value in the list wich will be searched</param>
+        /// <param name="max">The min value in the list wich will be searched</param>
+        /// <returns>Returns a random item from <paramref name="list"/> between <paramref name="min"/> and <paramref name="max"/> </returns>
         public static T GetRandomInRange<T>(this IList<T> list,int min, int max)
         {
             if(min <= 0 && max <= 0 ) throw new System.InvalidOperationException("The min|max params must be absolute integers");
