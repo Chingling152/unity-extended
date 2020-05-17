@@ -3,10 +3,7 @@ using UnityEngine;
 
 namespace UnityExtended.Extensions
 {
-    /// <summary>
-    /// Class used to create more methos to Vector2 class
-    /// </summary>
-    public static class Vector2Extension//TODO : Vector 3 Extensions
+    public static class Vector2Extension
     {
         /// <summary>
         /// Convert the current Vector2 to absolute integer Values
@@ -61,6 +58,11 @@ namespace UnityExtended.Extensions
             return direction.ToAngle();
         }
 
+        /// <summary>
+        /// Converts the current Vector 2 to angle
+        /// </summary>
+        /// <param name="vector2"></param>
+        /// <returns></returns>
         public static float ToAngle(this Vector2 vector2)
         {
             float angle = Mathf.Atan2(vector2.y, vector2.x) * Mathf.Rad2Deg;
