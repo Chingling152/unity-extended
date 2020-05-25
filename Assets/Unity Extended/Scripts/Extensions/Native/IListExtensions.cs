@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityExtended.Utils
+namespace UnityExtended.Extensions.Native
 {
     public static class IListExtensions
     {

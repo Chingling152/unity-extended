@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace UnityExtended.Extensions
+namespace UnityExtended.Extensions.Unity
 {
     public static class Vector2Extension
     {
