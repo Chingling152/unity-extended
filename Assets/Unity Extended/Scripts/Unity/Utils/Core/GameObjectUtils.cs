@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace UnityExtended.Unity.Utils
 {
@@ -34,7 +35,8 @@ namespace UnityExtended.Unity.Utils
         /// <returns>returns the count of every object of a tag in scene</returns>
         public static int InstanceCount(string tag, bool disabled = false)
         {
-            if(tag == null) throw new System.ArgumentNullException("Tag cannot be null");
+            if(tag == null) 
+                throw new ArgumentNullException(nameof(tag), "Tag cannot be null");
 
             GameObject[] instances = GameObject.FindGameObjectsWithTag(tag);
             if (disabled)
