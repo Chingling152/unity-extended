@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UnityExtended.System.Extensions.Collections.Generic
+namespace UnityExtended.System.Randomize.Collections.Generic
 {
     public static class IListExtensions
     {
