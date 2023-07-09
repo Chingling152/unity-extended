@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
 
-namespace UnityExtended.Extensions.Native
+namespace UnityExtended.System.Extensions.Collections.Generic
 {
     public static class IListExtensions
     {
@@ -12,8 +12,11 @@ namespace UnityExtended.Extensions.Native
         /// <returns>Returns a random item from <paramref name="list"/></returns>
         public static T GetRandom<T>(this IList<T> list)
         {
-            if(list == null)return default;
-            return list[Random.Range(0,list.Count)];
+            if(list == null)
+                return default;
+
+            var randomIndex = new Random().Next(0, list.Count);
+            return list[randomIndex];
         }
 
         /// <summary>
@@ -25,10 +28,14 @@ namespace UnityExtended.Extensions.Native
         /// <returns>Returns a random item from <paramref name="list"/> between <paramref name="min"/> and <paramref name="max"/> </returns>
         public static T GetRandomInRange<T>(this IList<T> list,int min, int max)
         {
-            if(min <= 0 && max <= 0 ) throw new System.InvalidOperationException("The min|max params must be absolute integers");
-            if(min >= max) throw new System.InvalidOperationException("The min param must be smaller than max param");
-            if(min > list.Count) throw new System.InvalidOperationException("The min param cannot be greater than list size");
-            if(max > list.Count) throw new System.InvalidOperationException("The max param cannot be greater than list size");
+            if(min <= 0 && max <= 0 ) 
+                throw new InvalidOperationException("The min|max params must be absolute integers");
+            if(min >= max) 
+                throw new InvalidOperationException("The min param must be smaller than max param");
+            if(min > list.Count) 
+                throw new InvalidOperationException("The min param cannot be greater than list size");
+            if(max > list.Count) 
+                throw new InvalidOperationException("The max param cannot be greater than list size");
 
             T[] newL = new T[max - min];
 
@@ -37,7 +44,7 @@ namespace UnityExtended.Extensions.Native
                 newL[i] = list[i];
             }
 
-            return newL.GetRandom<T>();
+            return newL.GetRandom();
         }
     } 
 }

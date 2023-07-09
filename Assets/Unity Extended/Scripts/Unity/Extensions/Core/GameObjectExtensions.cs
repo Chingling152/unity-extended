@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityExtended.Extensions.Unity
+namespace UnityExtended.Unity.Extensions
 {
     public static class GameObjectExtensions
     {
         /// <summary>
-        /// Finde the closest gameobject of the current one based on it's tag
+        /// Find the closest GameObject based on it's tag
         /// </summary>
         /// <typeparam name="T">Type of object to find</typeparam>
-        /// <param name="obj">Object wich is searching</param>
         /// <param name="tag">Tag of the searched object</param>
         /// <param name="maxDistance">Max distance that will be searched</param>
         /// <returns>Returns a single GameObject or null</returns>
@@ -19,7 +18,7 @@ namespace UnityExtended.Extensions.Unity
 
             if (objects != null)
             {
-                List<T> selectedObjects = new List<T>();
+                var selectedObjects = new List<T>();
                 foreach (var item in objects)
                 {
                     if (item.TryGetComponent<T>(out var component))
@@ -31,10 +30,9 @@ namespace UnityExtended.Extensions.Unity
         }
 
         /// <summary>
-        /// Finde the closest gameobject of the current one based on it's Type
+        /// Find the closest GameObject based on it's Type
         /// </summary>
         /// <typeparam name="T">Type of object to find</typeparam>
-        /// <param name="obj">Object wich is searching</param>
         /// <param name="maxDistance">Max distance that will be searched</param>
         /// <returns>Returns a single GameObject or null</returns>
         public static T FindNearestByType<T>(this GameObject obj,float maxDistance = float.PositiveInfinity) where T : MonoBehaviour
@@ -42,7 +40,7 @@ namespace UnityExtended.Extensions.Unity
             var objects = GameObject.FindObjectsOfType<T>();
             if (objects != null)
             {
-                List<T> selectedObjects = new List<T>();
+                var selectedObjects = new List<T>();
                 foreach (var item in objects)
                 {
                     if (item.TryGetComponent<T>(out var component))
@@ -54,10 +52,9 @@ namespace UnityExtended.Extensions.Unity
         }
 
         /// <summary>
-        /// Searchs on a list of GameObjects wich one it's closest to <see cref="obj"/>
+        /// Searchs in a list of GameObjects wich is closest one
         /// </summary>
         /// <typeparam name="T">Type of object to find</typeparam>
-        /// <param name="obj">Object wich is searching</param>
         /// <param name="objects">Object list to be filtered</param>
         /// <param name="maxDistance">Max distance that will be searched</param>
         /// <returns>Returns the closests GameObject of obj or null</returns>
@@ -90,7 +87,6 @@ namespace UnityExtended.Extensions.Unity
         /// <summary>
         /// Finds a child insides the gameobject that match with the name parameter
         /// </summary>
-        /// <param name="obj"></param>
         /// <param name="name">The name of the child you want to search</param>
         /// <returns>returns a game object or null</returns>
         public static GameObject GetChildByName(this GameObject obj,string name)

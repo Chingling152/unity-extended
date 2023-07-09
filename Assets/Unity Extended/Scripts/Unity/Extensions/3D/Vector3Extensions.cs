@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace UnityExtended.Extensions.Unity
+namespace UnityExtended.Unity.Extensions._3D
 {
     public static class Vector3Extension
     {
@@ -40,7 +40,9 @@ namespace UnityExtended.Extensions.Unity
         public static float ToAngle(this Vector3 vector3)
         {
             float angle = Mathf.Atan2(vector3.y, vector3.x) * Mathf.Rad2Deg;
-            if (angle < 0) angle += 360;
+
+            if (angle < 0) 
+                angle += 360;
 
             return angle;
         }

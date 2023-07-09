@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UnityExtended.Utils.Unity
+namespace UnityExtended.Unity.Utils
 {
     /// <summary>
     /// Static class to handle GameObjects in Scene
