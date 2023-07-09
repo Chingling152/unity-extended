@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace UnityExtended.Unity._2D.Extensions
+namespace UnityExtended.Unity._2D.Randomize
 {
-    public static class SpriteRendererExtension
+    public static class SpriteRendererRandomExtension
     {
         /// <summary>
         /// Sets a random color to a specific Sprite
