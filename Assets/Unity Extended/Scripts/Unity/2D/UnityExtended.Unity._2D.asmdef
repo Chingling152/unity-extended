@@ -1,0 +1,14 @@
+{
+    "name": "UnityExtended.Unity._2D",
+    "rootNamespace": "UnityExtended.Unity._2D",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
