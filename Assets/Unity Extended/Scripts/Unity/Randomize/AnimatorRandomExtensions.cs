@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-namespace UnityExtended.Unity.Extensions
+namespace UnityExtended.Unity.Randomize
 {
-    public static class AnimatorExtensions
+    public static class AnimatorRandomExtensions
     {
         public static void SetRandomParameter(this Animator anim,string name,int variations)
         {
