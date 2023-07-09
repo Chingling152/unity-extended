@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace UnityExtended.Unity.Extensions._3D
+namespace UnityExtended.Unity._3D.Extensions
 {
     public static class Vector3Extension
     {

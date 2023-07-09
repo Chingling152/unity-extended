@@ -44,7 +44,9 @@ namespace UnityExtended.Unity.Utils
 
             var count = 0;
             foreach (var instance in instances)
+            {
                 count = instance.activeInHierarchy ? count + 1 : count;
+            }
 
             return count;
         }
