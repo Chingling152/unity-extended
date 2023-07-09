@@ -10,8 +10,22 @@ namespace UnityExtended.Unity._2D.Randomize
         /// <param name="spr">Sprite wich will have the color changed</param>
         public static void RandomColor(this SpriteRenderer spr)
         {
-            Color color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
-            spr.material.color = color;
+            spr.material.color = new Color(
+                r: Random.Range(0.0f, 1.0f), 
+                g: Random.Range(0.0f, 1.0f), 
+                b: Random.Range(0.0f, 1.0f)
+           );
+        }
+
+        public static void RandomAlpha(this SpriteRenderer spr)
+        {
+            var color = spr.material.color;
+            spr.material.color = new Color(
+                r: color.r,
+                g: color.g,
+                b: color.b,
+                a: Random.Range(0.0f, 1.0f)
+            );
         }
     }
 }

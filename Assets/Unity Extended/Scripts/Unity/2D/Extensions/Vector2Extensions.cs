@@ -66,7 +66,8 @@ namespace UnityExtended.Unity._2D.Extensions
         public static float ToAngle(this Vector2 vector2)
         {
             float angle = Mathf.Atan2(vector2.y, vector2.x) * Mathf.Rad2Deg;
-            if (angle < 0) angle += 360;
+            if (angle < 0) 
+                angle += 360;
 
             return angle;
         }
