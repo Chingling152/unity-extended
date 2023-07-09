@@ -1,6 +1,8 @@
 ﻿using System;
 
-namespace UnityExtended.System.Attributes { 
+namespace UnityExtended.System.Attributes 
+{
+    [Obsolete("No use for now")]
     [AttributeUsage(AttributeTargets.Field)]
     public class RandomAttribute : Attribute
     {
